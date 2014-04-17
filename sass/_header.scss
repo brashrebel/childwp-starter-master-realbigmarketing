@@ -1,27 +1,60 @@
 #header {
-	background: #333333;
-	margin: -25px 0 20px -10px;
-	padding: 20px;
-	width: 102%;
+background: $gray;
+padding: 20px;
+width: 102%;
+position: relative;
+z-index: 99;
+}
+.site-header {
+width: 30%;
 }
 .top-bar, .top-bar-section li:not(.has-form) a:not(.button) {
-background: #121212;
+background: $black;
 }
 .top-bar-section li.active:not(.has-form) a:not(.button), .top-bar-section li.active:not(.has-form) a:not(.button):hover {
-background: #272727;
+background: $gray;
+}
+.top-bar {
+	.name{
+	padding: 10px;
+		span {
+		color: $lg;
+		}
+	}
 }
 /* Big ideas, real results menu */
 #big-menu {
 position: relative;
-	li {
-	list-style: none;
-	display: inline-block;
-		a {
-		font-size: 2em;
-		}
-		.real-big-nav {
-		position: absolute;
-		left: 0;
+margin: 30px 0 0 0;
+	ul {
+		li.top-link {
+		list-style: none;
+		display: inline-block;
+		float: right;
+			> a {
+			font-size: 2em;
+			padding: 0 20px 20px;
+			font-weight: bold;
+			color: $lg;
+				span {
+				padding: 0 6px 0 0;			
+					&.fa-bulb {
+					color: $blue;
+					}
+					&.fa-gear {
+					color: $green;
+					}
+				}
+				&:hover {
+				color: $white;
+				}
+			}
+			.real-big-nav {
+			position: absolute;
+			left: 0;
+			background: $gray;
+			color: $white;
+			}
 		}
 	}
 }
@@ -31,5 +64,39 @@ position: relative;
 }
 #bi-link:hover #big-ideas, #rr-link:hover #real-results {
 	height: auto;
+	width: 100%;
+	padding: 10px;
+	margin: 8px 0 0 0;
+}
+.fa-bulb:before {
+content: "\f0eb";
+}
+.fa-gear:before {
+content: "\f013";
 }
 /* end big ideas, real results menu */
+
+/* Responsive adjustments */
+@media only screen and (max-width: $tiny) {
+
+}
+@media only screen and (min-width: $tiny) and (max-width: $small) {
+
+}
+@media only screen and (min-width: $small) and (max-width: $medium) {
+
+}
+@media only screen and (min-width: $medium) {
+#header {
+margin: -25px 0 20px -10px;
+}
+.top-bar {
+	.name {
+		span {
+			&:before {
+			content: "Call us today: ";
+			}
+		}
+	}
+}
+}

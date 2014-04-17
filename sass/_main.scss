@@ -1,6 +1,24 @@
+#wrapper {
+max-width: none;
+box-shadow: none;
+background-color: $lg;
+}
+.row {
+max-width: none;
+}
+#content {
+outline: 5px solid $lg;
+}
+#content, #secondary {
+padding-top: 12px; 
+}
 button, .button {
-background: #12538F;
+background: $blue;
 }
 a.button:hover, input.button:hover {
-	background: #76d100;
+	background: $green;
+}
+.fa {
+font-family: 'FontAwesome';
+font-weight: lighter;
 }

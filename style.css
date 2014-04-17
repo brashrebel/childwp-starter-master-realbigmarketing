@@ -1716,62 +1716,153 @@ span.screen-reader-text {
   }
 }
 /* line 1, ../sass/_main.scss */
-button, .button {
-  background: #12538F;
+#wrapper {
+  max-width: none;
+  box-shadow: none;
+  background-color: #e0e0e0;
 }
 
-/* line 4, ../sass/_main.scss */
+/* line 6, ../sass/_main.scss */
+.row {
+  max-width: none;
+}
+
+/* line 9, ../sass/_main.scss */
+#content {
+  outline: 5px solid #e0e0e0;
+}
+
+/* line 12, ../sass/_main.scss */
+#content, #secondary {
+  padding-top: 12px;
+}
+
+/* line 15, ../sass/_main.scss */
+button, .button {
+  background: #12538f;
+}
+
+/* line 18, ../sass/_main.scss */
 a.button:hover, input.button:hover {
   background: #76d100;
+}
+
+/* line 21, ../sass/_main.scss */
+.fa {
+  font-family: 'FontAwesome';
+  font-weight: lighter;
 }
 
 /* line 1, ../sass/_header.scss */
 #header {
   background: #333333;
-  margin: -25px 0 20px -10px;
   padding: 20px;
   width: 102%;
+  position: relative;
+  z-index: 99;
 }
 
-/* line 7, ../sass/_header.scss */
+/* line 8, ../sass/_header.scss */
+.site-header {
+  width: 30%;
+}
+
+/* line 11, ../sass/_header.scss */
 .top-bar, .top-bar-section li:not(.has-form) a:not(.button) {
   background: #121212;
 }
 
-/* line 10, ../sass/_header.scss */
+/* line 14, ../sass/_header.scss */
 .top-bar-section li.active:not(.has-form) a:not(.button), .top-bar-section li.active:not(.has-form) a:not(.button):hover {
-  background: #272727;
+  background: #333333;
+}
+
+/* line 18, ../sass/_header.scss */
+.top-bar .name {
+  padding: 10px;
+}
+/* line 20, ../sass/_header.scss */
+.top-bar .name span {
+  color: #e0e0e0;
 }
 
 /* Big ideas, real results menu */
-/* line 14, ../sass/_header.scss */
+/* line 26, ../sass/_header.scss */
 #big-menu {
   position: relative;
+  margin: 30px 0 0 0;
 }
-/* line 16, ../sass/_header.scss */
-#big-menu li {
+/* line 30, ../sass/_header.scss */
+#big-menu ul li.top-link {
   list-style: none;
   display: inline-block;
+  float: right;
 }
-/* line 19, ../sass/_header.scss */
-#big-menu li a {
+/* line 34, ../sass/_header.scss */
+#big-menu ul li.top-link > a {
   font-size: 2em;
+  padding: 0 20px 20px;
+  font-weight: bold;
+  color: #e0e0e0;
 }
-/* line 22, ../sass/_header.scss */
-#big-menu li .real-big-nav {
+/* line 39, ../sass/_header.scss */
+#big-menu ul li.top-link > a span {
+  padding: 0 6px 0 0;
+}
+/* line 41, ../sass/_header.scss */
+#big-menu ul li.top-link > a span.fa-bulb {
+  color: #12538f;
+}
+/* line 44, ../sass/_header.scss */
+#big-menu ul li.top-link > a span.fa-gear {
+  color: #76d100;
+}
+/* line 48, ../sass/_header.scss */
+#big-menu ul li.top-link > a:hover {
+  color: white;
+}
+/* line 52, ../sass/_header.scss */
+#big-menu ul li.top-link .real-big-nav {
   position: absolute;
   left: 0;
+  background: #333333;
+  color: white;
 }
 
-/* line 28, ../sass/_header.scss */
+/* line 61, ../sass/_header.scss */
 #big-ideas, #real-results {
   overflow: hidden;
   height: 0;
 }
 
-/* line 32, ../sass/_header.scss */
+/* line 65, ../sass/_header.scss */
 #bi-link:hover #big-ideas, #rr-link:hover #real-results {
   height: auto;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 0 0;
+}
+
+/* line 71, ../sass/_header.scss */
+.fa-bulb:before {
+  content: "\f0eb";
+}
+
+/* line 74, ../sass/_header.scss */
+.fa-gear:before {
+  content: "\f013";
 }
 
 /* end big ideas, real results menu */
+/* Responsive adjustments */
+@media only screen and (min-width: 60em) {
+  /* line 90, ../sass/_header.scss */
+  #header {
+    margin: -25px 0 20px -10px;
+  }
+
+  /* line 96, ../sass/_header.scss */
+  .top-bar .name span:before {
+    content: "Call us today: ";
+  }
+}

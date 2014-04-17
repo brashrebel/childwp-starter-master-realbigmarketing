@@ -46,6 +46,7 @@
                     <p class="site-description"><?php bloginfo( 'description' ); ?></p>                    
                 </div><!-- /.header-info -->
              </div><!-- .site-header -->
+        <?php include('big.php'); ?>
         </header><!-- #header -->
             
 		<?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal') { ?>
@@ -55,7 +56,5 @@
         <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
             <?php get_template_part( 'content', 'nav' ); ?>
         <?php } // end if ?> 
-        
-        <?php include('big.php'); ?>
     
         <section class="container row" role="document">
