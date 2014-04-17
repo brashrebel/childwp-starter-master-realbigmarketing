@@ -10,9 +10,9 @@
 	<li id="rr-link">
 		<a href="#">Real Results</a>
 		<div id="real-results" class="row real-big-nav">
-			<div class="small-2 large-4 column">Cool stuff here</div>
-			<div class="small-4 large-4 column">Cooler stuff here</div>
-			<div class="small-6 large-4 column">Coolest stuff here</div>
+			<div class="small-2 large-4 column">This is amazing</div>
+			<div class="small-4 large-4 column">I have a website</div>
+			<div class="small-6 large-4 column">Whatch me code!</div>
 		</div>
 	</li>
 </ul>
