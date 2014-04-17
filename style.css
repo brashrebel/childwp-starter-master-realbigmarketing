@@ -1,0 +1,1768 @@
+/*!
+Theme Name:   CHILDwp-starter-master-realbigmarketing
+Description:  A child theme for WP-Forge modified for realbigmarketing.com
+Author:       Kyle Maurer
+Template:     wp-forge
+Version:      1.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain:  wpstarter
+*/
+/* =Reset
+-------------------------------------------------------------- */
+/* line 15, ../sass/_parent.scss */
+ins {
+  background: #fff9c0 !important;
+  text-decoration: none;
+  padding: 0 3px;
+}
+
+/* line 21, ../sass/_parent.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 27, ../sass/_parent.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 30, ../sass/_parent.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 33, ../sass/_parent.scss */
+small {
+  font-size: smaller;
+}
+
+/* line 36, ../sass/_parent.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 40, ../sass/_parent.scss */
+.top-bar-section > .alert-box.secondary p {
+  margin: 0.5em 0 !important;
+}
+
+/* line 43, ../sass/_parent.scss */
+textarea {
+  min-height: 250px !important;
+}
+
+/* =Repeatable patterns
+-------------------------------------------------------------- */
+/* Small headers */
+/* line 54, ../sass/_parent.scss */
+.archive-title,
+.page-title,
+.entry-content th,
+.comment-content th {
+  font-size: 0.6875rem;
+  line-height: 2.181818182;
+  font-weight: normal !important;
+  text-transform: uppercase;
+  color: #636363;
+}
+
+/* line 61, ../sass/_parent.scss */
+.widget-title {
+  font-weight: normal !important;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+/* line 66, ../sass/_parent.scss */
+select {
+  /* Make sure select elements fit in widgets */
+  cursor: pointer;
+  max-width: 100%;
+  padding: 0.3em !important;
+  border: 1px solid #ccc;
+}
+
+/* line 72, ../sass/_parent.scss */
+li.bypostauthor cite span {
+  color: #fff;
+  background-color: #21759b;
+  background-image: none;
+  border: 1px solid #1f6f93;
+  border-radius: 2px;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Responsive images */
+/* line 85, ../sass/_parent.scss */
+.entry-content img,
+.comment-content img,
+.widget img {
+  max-width: 100%;
+  /* Fluid images for posts, comments, and widgets */
+}
+
+/* line 90, ../sass/_parent.scss */
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+  height: auto;
+  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+/* line 96, ../sass/_parent.scss */
+img.size-full,
+img.size-large,
+img.header-image,
+img.wp-post-image {
+  max-width: 100%;
+  height: auto;
+  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+/* line 100, ../sass/_parent.scss */
+img.wp-post-image {
+  margin-bottom: 1.5rem;
+}
+
+/* Make sure videos and embeds fit their containers */
+/* line 108, ../sass/_parent.scss */
+embed,
+iframe,
+object,
+video {
+  max-width: 100%;
+}
+
+/* line 111, ../sass/_parent.scss */
+.entry-content .twitter-tweet-rendered {
+  max-width: 100% !important;
+  /* Override the Twitter embed fixed width */
+}
+
+/* Images */
+/* line 116, ../sass/_parent.scss */
+.alignleft {
+  float: left;
+}
+
+/* line 119, ../sass/_parent.scss */
+.alignright {
+  float: right;
+}
+
+/* line 122, ../sass/_parent.scss */
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 127, ../sass/_parent.scss */
+.wp-caption {
+  max-width: 100%;
+  /* Keep wide captions from overflowing their container. */
+  padding: 4px;
+}
+
+/* line 133, ../sass/_parent.scss */
+.wp-caption .wp-caption-text,
+.gallery-caption,
+.entry-caption {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 2;
+  color: #757575;
+}
+
+/* line 140, ../sass/_parent.scss */
+img.wp-smiley,
+.rsswidget img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* line 148, ../sass/_parent.scss */
+.entry-content dl.gallery-item {
+  margin: 0;
+}
+
+/* line 152, ../sass/_parent.scss */
+.gallery-item a,
+.gallery-caption {
+  width: 90%;
+}
+
+/* line 155, ../sass/_parent.scss */
+.gallery-item a {
+  display: block;
+}
+
+/* line 158, ../sass/_parent.scss */
+.gallery-caption a {
+  display: inline;
+}
+
+/* line 161, ../sass/_parent.scss */
+.gallery-columns-1 .gallery-item a {
+  max-width: 100%;
+  width: auto;
+}
+
+/* line 165, ../sass/_parent.scss */
+.gallery .gallery-icon img {
+  height: auto;
+  max-width: 90%;
+  border: 0 !important;
+}
+
+/* line 170, ../sass/_parent.scss */
+.gallery-columns-1 .gallery-icon img {
+  padding: 3%;
+}
+
+/* Navigation */
+/* line 175, ../sass/_parent.scss */
+.nav-single {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin-bottom: 60px !important;
+}
+
+/* line 182, ../sass/_parent.scss */
+.site-content nav {
+  clear: both;
+  line-height: 2;
+  overflow: hidden;
+}
+
+/* line 187, ../sass/_parent.scss */
+.site-content #image-navigation {
+  margin: 1.5rem 0;
+}
+
+/* line 190, ../sass/_parent.scss */
+#nav-above {
+  padding: 1.5rem 0;
+}
+
+/* line 193, ../sass/_parent.scss */
+#nav-above {
+  display: none;
+}
+
+/* line 196, ../sass/_parent.scss */
+.paged #nav-above {
+  display: block;
+}
+
+/* line 200, ../sass/_parent.scss */
+.nav-previous,
+.previous-image {
+  float: left;
+  width: 50%;
+}
+
+/* line 205, ../sass/_parent.scss */
+.nav-next,
+.next-image {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/* line 211, ../sass/_parent.scss */
+.nav-single + .comments-area,
+#comment-nav-above {
+  margin: 3rem 0;
+}
+
+/* Author profiles */
+/* line 216, ../sass/_parent.scss */
+.author .archive-header {
+  margin-bottom: 1.5rem;
+}
+
+/* line 219, ../sass/_parent.scss */
+.author-info {
+  border-top: 1px solid #ededed;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+/* line 225, ../sass/_parent.scss */
+.author-description p {
+  color: #757575;
+  font-size: 0.875rem;
+  line-height: 1.846153846;
+}
+
+/* line 230, ../sass/_parent.scss */
+.author.archive .author-info {
+  border-top: 0;
+  margin: 0 0 3rem;
+  border-bottom: 1px solid #ededed;
+  padding: 10px 0;
+}
+
+/* line 236, ../sass/_parent.scss */
+.author.archive .author-avatar img {
+  margin-top: 0;
+  border-radius: 50%;
+}
+
+/* line 240, ../sass/_parent.scss */
+.author-avatar img {
+  float: left;
+  margin-top: 8px;
+  border-radius: 50%;
+}
+
+/* line 245, ../sass/_parent.scss */
+.author-description {
+  float: right;
+  width: 85%;
+}
+
+/* line 249, ../sass/_parent.scss */
+.author-description h2 {
+  margin-top: 0 !important;
+}
+
+/* =Basic structure
+-------------------------------------------------------------- */
+/* Body, links, basics */
+/* line 256, ../sass/_parent.scss */
+body {
+  background-color: #e6e6e6;
+  text-rendering: optimizeLegibility;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* line 262, ../sass/_parent.scss */
+.row {
+  background-color: #fff;
+}
+
+/* line 265, ../sass/_parent.scss */
+#wrapper {
+  width: 100%;
+  max-width: 62.5rem;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+  background-color: #fff;
+  padding: 1.5625rem 0.625rem 0;
+}
+
+/* Header */
+/* line 275, ../sass/_parent.scss */
+#header {
+  margin-bottom: 1.5rem;
+}
+
+/* line 278, ../sass/_parent.scss */
+.header-logo, .header-info {
+  display: block;
+  float: left;
+  max-width: 100%;
+}
+
+/* line 283, ../sass/_parent.scss */
+.site-header {
+  width: 100%;
+}
+
+/* line 286, ../sass/_parent.scss */
+.site-header p {
+  margin: 0 !important;
+}
+
+/* line 289, ../sass/_parent.scss */
+p.site-title a {
+  color: #515151;
+  display: block;
+  font-size: 2.75rem;
+  text-decoration: none;
+}
+
+/* line 295, ../sass/_parent.scss */
+.site-title a:hover {
+  color: #21759b !important;
+}
+
+/* line 298, ../sass/_parent.scss */
+.site-header h1 {
+  margin: 0 !important;
+}
+
+/* line 301, ../sass/_parent.scss */
+p.site-description {
+  color: #757575;
+  font-size: 1.6875rem;
+  margin: 0 !important;
+  line-height: 1;
+}
+
+/* line 307, ../sass/_parent.scss */
+img.header-image {
+  /* Remove fancy borders */
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Sidebar */
+/* line 313, ../sass/_parent.scss */
+.widget-area .widget {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  margin-bottom: 3rem;
+}
+
+/* line 319, ../sass/_parent.scss */
+.widget-area .widget ul {
+  margin-left: 2em;
+}
+
+/* line 322, ../sass/_parent.scss */
+.widget-area .widget h3 {
+  margin-bottom: 5px;
+}
+
+/* line 326, ../sass/_parent.scss */
+.widget-area .widget p,
+.widget-area .widget li {
+  line-height: 1.846153846;
+  font-size: 0.875rem !important;
+  /* equal to 14px */
+}
+
+/* line 330, ../sass/_parent.scss */
+.widget.widget_text {
+  line-height: 1.846153846;
+  font-size: 0.875rem !important;
+  /* equal to 14px */
+}
+
+/* line 334, ../sass/_parent.scss */
+.widget-area .widget p {
+  margin-bottom: 1.5rem;
+}
+
+/* line 337, ../sass/_parent.scss */
+.widget-area .textwidget ul {
+  list-style: disc outside;
+  margin: 0 0 1.5rem;
+}
+
+/* line 341, ../sass/_parent.scss */
+.widget-area .textwidget li {
+  margin-left: 36px;
+}
+
+/* Search widget */
+/* line 345, ../sass/_parent.scss */
+label > .screen-reader-text {
+  display: none !important;
+}
+
+/* Footer */
+/* line 350, ../sass/_parent.scss */
+footer[role="contentinfo"] {
+  border-top: 4px double #ededed;
+  clear: both;
+  font-size: 0.875rem !important;
+  line-height: 2;
+  padding: 1.5rem 0;
+}
+
+/* line 357, ../sass/_parent.scss */
+footer > .site-info {
+  text-align: right !important;
+  margin-bottom: 0 !important;
+  font-size: 1rem;
+}
+
+/* line 362, ../sass/_parent.scss */
+footer[role="contentinfo"] a {
+  color: #686868;
+  text-decoration: none;
+}
+
+/* line 366, ../sass/_parent.scss */
+footer[role="contentinfo"] a:hover {
+  color: #21759b;
+}
+
+/* Footer Sidebar */
+/* line 371, ../sass/_parent.scss */
+#secondary-sidebar {
+  padding-top: 1.5rem !important;
+  border-top: 1px solid #ededed !important;
+}
+
+/* =Main content and comment content
+-------------------------------------------------------------- */
+/* line 379, ../sass/_parent.scss */
+.entry-meta {
+  clear: both;
+}
+
+/* line 382, ../sass/_parent.scss */
+.entry-header {
+  margin-bottom: 1.5rem;
+}
+
+/* line 385, ../sass/_parent.scss */
+.entry-header img.wp-post-image {
+  margin-bottom: 1.5rem;
+}
+
+/* line 388, ../sass/_parent.scss */
+.entry-header .entry-title a {
+  text-decoration: none;
+}
+
+/* line 391, ../sass/_parent.scss */
+.entry-header .entry-format {
+  margin-top: 1.5rem;
+  font-weight: normal;
+}
+
+/* line 395, ../sass/_parent.scss */
+.entry-header .comments-link {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.846153846;
+  color: #757575;
+}
+
+/* line 401, ../sass/_parent.scss */
+span.edit-link {
+  margin-left: 5px;
+}
+
+/* line 404, ../sass/_parent.scss */
+article .featured-post {
+  border-top: 4px double #ededed;
+  border-bottom: 4px double #ededed;
+  color: #757575;
+  font-size: 0.875rem;
+  line-height: 3.692307692;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* line 413, ../sass/_parent.scss */
+.entry-content ul, .entry-content ol {
+  margin-left: 2.125rem;
+}
+
+/* line 416, ../sass/_parent.scss */
+.entry-content [class*="block-grid-"] {
+  margin: 0 0.625em !important;
+}
+
+/* line 419, ../sass/_parent.scss */
+.entry-content ul.pricing-table {
+  margin-left: 0 !important;
+}
+
+/* line 422, ../sass/_parent.scss */
+.entry-content .f-dropdown {
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  list-style: none !important;
+}
+
+/* line 428, ../sass/_parent.scss */
+.entry-content blockquote,
+.comment-content blockquote {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  font-style: italic;
+}
+
+/* line 434, ../sass/_parent.scss */
+.entry-content blockquote p:last-child,
+.comment-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 438, ../sass/_parent.scss */
+.entry-content pre,
+.comment-content pre {
+  background: #f5f5f5;
+  color: #666;
+  margin: 20px 0;
+  overflow: auto;
+  padding: 20px;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+
+/* line 448, ../sass/_parent.scss */
+.entry-content pre code,
+.comment-content pre code {
+  display: block;
+}
+
+/* line 452, ../sass/_parent.scss */
+.entry-content address,
+.comment-content address {
+  display: block;
+  line-height: 1.714285714;
+  margin: 0 0 1.5rem;
+}
+
+/* line 457, ../sass/_parent.scss */
+img.alignleft, .wp-caption.alignleft {
+  margin: 12px 1.5rem 12px 0 !important;
+}
+
+/* line 460, ../sass/_parent.scss */
+img.alignright, .wp-caption.alignright {
+  margin: 12px 0 12px 1.5rem !important;
+}
+
+/* line 463, ../sass/_parent.scss */
+img.aligncenter {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/* line 467, ../sass/_parent.scss */
+img.alignnone {
+  margin-bottom: 1.5rem !important;
+}
+
+/* line 473, ../sass/_parent.scss */
+.entry-content embed,
+.entry-content iframe,
+.entry-content object,
+.entry-content video {
+  margin-bottom: 1.5rem;
+}
+
+/* line 477, ../sass/_parent.scss */
+.entry-content dt,
+.comment-content dt {
+  font-weight: bold;
+  line-height: 1.714285714;
+}
+
+/* line 482, ../sass/_parent.scss */
+.entry-content dd,
+.comment-content dd {
+  line-height: 1.714285714;
+  margin-bottom: 1.5rem;
+}
+
+/* line 487, ../sass/_parent.scss */
+.entry-content table,
+.comment-content table {
+  border-bottom: 1px solid #ededed;
+  color: #757575;
+  line-height: 2;
+  margin: 0 0 1.5rem;
+  width: 100%;
+}
+
+/* line 495, ../sass/_parent.scss */
+.entry-content table caption,
+.comment-content table caption {
+  font-size: 16px;
+  margin: 1.5rem 0;
+}
+
+/* line 500, ../sass/_parent.scss */
+.entry-content td,
+.comment-content td {
+  border-top: 1px solid #ededed;
+  padding: 6px 10px;
+}
+
+/* line 507, ../sass/_parent.scss */
+.entry-content th,
+.comment-content th,
+.entry-content td,
+.comment-content td {
+  text-align: left;
+}
+
+/* line 510, ../sass/_parent.scss */
+article {
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 35px;
+  padding-bottom: 1.5rem;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+/* line 518, ../sass/_parent.scss */
+body.page article {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* line 523, ../sass/_parent.scss */
+body.page footer.entry-meta {
+  margin-bottom: 1.5rem;
+}
+
+/* line 526, ../sass/_parent.scss */
+.error404 article {
+  border-bottom: none;
+}
+
+/* line 529, ../sass/_parent.scss */
+.page-links {
+  clear: both;
+  line-height: 1.714285714;
+}
+
+/* line 533, ../sass/_parent.scss */
+footer.entry-meta {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.846153846;
+  color: #757575;
+}
+
+/* line 539, ../sass/_parent.scss */
+.single-author .entry-meta .by-author {
+  display: none;
+}
+
+/* line 546, ../sass/_parent.scss */
+span.sticky-post,
+span.date,
+span.categories-links,
+span.tags-links,
+span.pfont {
+  margin-right: 10px;
+}
+
+/* =Archives
+-------------------------------------------------------------- */
+/* line 553, ../sass/_parent.scss */
+.archive-header,
+.page-header {
+  margin-bottom: 3rem;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #ededed;
+}
+
+/* line 558, ../sass/_parent.scss */
+.archive-meta {
+  color: #757575;
+  font-size: 12px;
+  line-height: 2;
+  margin-top: 22px;
+}
+
+/* =Single image attachment view
+-------------------------------------------------------------- */
+/* line 567, ../sass/_parent.scss */
+.article.attachment {
+  overflow: hidden;
+}
+
+/* line 570, ../sass/_parent.scss */
+.image-attachment div.attachment {
+  text-align: center;
+}
+
+/* line 573, ../sass/_parent.scss */
+.image-attachment div.attachment p {
+  text-align: center;
+}
+
+/* line 576, ../sass/_parent.scss */
+.image-attachment div.attachment img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* line 582, ../sass/_parent.scss */
+.image-attachment .entry-caption {
+  margin-top: 8px;
+}
+
+/* =Aside post format
+-------------------------------------------------------------- */
+/* line 588, ../sass/_parent.scss */
+article.format-aside h1 {
+  margin-bottom: 1.5rem;
+}
+
+/* line 591, ../sass/_parent.scss */
+article.format-aside h1 a {
+  text-decoration: none;
+  color: #4d525a;
+}
+
+/* line 595, ../sass/_parent.scss */
+article.format-aside h1 a:hover {
+  color: #2e3542;
+}
+
+/* line 598, ../sass/_parent.scss */
+article.format-aside .aside {
+  padding: 1.5rem;
+  background: #d2e0f9;
+  border-left: 22px solid #a8bfe8;
+}
+
+/* line 603, ../sass/_parent.scss */
+article.format-aside p {
+  font-size: 0.875rem;
+  line-height: 1.846153846;
+  color: #4a5466;
+}
+
+/* line 609, ../sass/_parent.scss */
+article.format-aside blockquote:last-child,
+article.format-aside p:last-child {
+  margin-bottom: 0;
+}
+
+/* =Post formats
+-------------------------------------------------------------- */
+/* Image posts */
+/* line 616, ../sass/_parent.scss */
+article.format-image footer h1 {
+  font-size: 0.875rem;
+  line-height: 1.846153846;
+  font-weight: normal;
+}
+
+/* line 622, ../sass/_parent.scss */
+article.format-image footer h2 {
+  font-size: 11px;
+  line-height: 2.181818182;
+}
+
+/* line 626, ../sass/_parent.scss */
+article.format-image footer a h2 {
+  font-weight: normal;
+}
+
+/* Link posts */
+/* line 631, ../sass/_parent.scss */
+.pformat {
+  float: left;
+  font-size: 26px;
+  margin-right: 5px;
+  color: #888888 !important;
+}
+
+/* line 637, ../sass/_parent.scss */
+article.format-link header {
+  padding: 5px 10px;
+  float: right;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #848484;
+  background-color: #ebebeb;
+  border-radius: 3px;
+}
+
+/* line 646, ../sass/_parent.scss */
+article.format-link .entry-content a {
+  font-size: 22px;
+  line-height: 1.090909091;
+  text-decoration: none;
+}
+
+/* Quote posts */
+/* line 653, ../sass/_parent.scss */
+article.format-quote .entry-content p {
+  margin: 0;
+  padding-bottom: 1.5rem;
+}
+
+/* line 657, ../sass/_parent.scss */
+article.format-quote .entry-content blockquote {
+  display: block;
+  padding: 1.5rem 1.5rem 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6a6a6a;
+  background: #efefef;
+}
+
+/* Status posts */
+/* line 667, ../sass/_parent.scss */
+.format-status .entry-header {
+  margin-bottom: 30px;
+}
+
+/* line 670, ../sass/_parent.scss */
+.format-status .entry-header header {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+/* line 674, ../sass/_parent.scss */
+.format-status .entry-header h1 {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* line 680, ../sass/_parent.scss */
+.format-status .entry-header h2 {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 2;
+  margin: 0;
+}
+
+/* line 686, ../sass/_parent.scss */
+.format-status .entry-header header a {
+  color: #757575;
+}
+
+/* line 689, ../sass/_parent.scss */
+.format-status .entry-header header a:hover {
+  color: #21759b;
+}
+
+/* line 692, ../sass/_parent.scss */
+.format-status .entry-header img {
+  float: left;
+  margin-right: 21px;
+  border-radius: 50%;
+}
+
+/* Page links */
+/* line 699, ../sass/_parent.scss */
+.page-links {
+  clear: both;
+  font-weight: normal;
+  line-height: 2.2;
+  margin: 20px 0;
+}
+
+/* line 705, ../sass/_parent.scss */
+.page-links > span {
+  background: #fff;
+  border: 1px solid #fff;
+  padding: 1px 7px;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+/* line 712, ../sass/_parent.scss */
+.page-links a {
+  padding: 1px 7px;
+  text-decoration: none;
+  background: #2ba6cb;
+  color: #fff;
+}
+
+/* line 718, ../sass/_parent.scss */
+.page-links a:hover {
+  background: #e6e6e6;
+  color: #555;
+}
+
+/* =Comments
+-------------------------------------------------------------- */
+/* line 725, ../sass/_parent.scss */
+.comments-title {
+  margin-bottom: 3rem;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+/* line 731, ../sass/_parent.scss */
+.comments-area article {
+  margin: 1.5rem 0;
+}
+
+/* line 734, ../sass/_parent.scss */
+.comments-area article header {
+  margin: 0 0 3rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 739, ../sass/_parent.scss */
+.comments-area article header img {
+  float: left;
+  padding: 0;
+  line-height: 0;
+  border-radius: 50%;
+}
+
+/* line 746, ../sass/_parent.scss */
+.comments-area article header cite,
+.comments-area article header time {
+  display: block;
+  margin-left: 80px;
+}
+
+/* line 750, ../sass/_parent.scss */
+.comments-area article header cite {
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.42857143;
+  margin-top: 8px;
+}
+
+/* line 756, ../sass/_parent.scss */
+.comments-area article header time {
+  line-height: 1.714285714;
+  text-decoration: none;
+  font-size: 12px;
+  color: #5e5e5e;
+}
+
+/* line 762, ../sass/_parent.scss */
+.comments-area article header a {
+  text-decoration: none;
+  color: #5e5e5e;
+}
+
+/* line 766, ../sass/_parent.scss */
+.comments-area article header a:hover {
+  color: #21759b;
+}
+
+/* line 769, ../sass/_parent.scss */
+.comments-area article header cite a {
+  color: #444;
+}
+
+/* line 772, ../sass/_parent.scss */
+.comments-area article header cite a:hover {
+  text-decoration: underline;
+}
+
+/* line 775, ../sass/_parent.scss */
+.comments-area article header h4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+  background-color: #0088d0;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #009cee, #0088d0);
+  background-image: -ms-linear-gradient(top, #009cee, #0088d0);
+  background-image: -webkit-linear-gradient(top, #009cee, #0088d0);
+  background-image: -o-linear-gradient(top, #009cee, #0088d0);
+  background-image: linear-gradient(top, #009cee, #0088d0);
+  border-radius: 3px;
+  border: 1px solid #007cbd;
+}
+
+/* line 793, ../sass/_parent.scss */
+.comments-area li.bypostauthor cite span {
+  position: absolute;
+  margin-left: 5px;
+  padding: 2px 5px;
+  font-size: 10px;
+}
+
+/* line 800, ../sass/_parent.scss */
+a.comment-reply-link,
+a.comment-edit-link {
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+/* line 804, ../sass/_parent.scss */
+.commentlist .pingback {
+  line-height: 1.714285714;
+  margin: 1rem 0;
+  list-style: none !important;
+}
+
+/* Comment form */
+/* line 811, ../sass/_parent.scss */
+#respond {
+  margin-top: 3rem;
+}
+
+/* line 814, ../sass/_parent.scss */
+#respond h3#reply-title {
+  font-size: 1.4375rem;
+  line-height: 1.5;
+}
+
+/* line 818, ../sass/_parent.scss */
+#respond h3#reply-title #cancel-comment-reply-link {
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+/* line 823, ../sass/_parent.scss */
+#respond form {
+  margin: 1.5rem 0;
+}
+
+/* line 826, ../sass/_parent.scss */
+#respond form p {
+  margin: 11px 0;
+}
+
+/* line 829, ../sass/_parent.scss */
+#respond form p.logged-in-as {
+  margin-bottom: 1.5rem;
+}
+
+/* line 832, ../sass/_parent.scss */
+#respond form label {
+  display: block;
+  line-height: 1.714285714;
+}
+
+/* line 837, ../sass/_parent.scss */
+#respond form input[type="text"],
+#respond form textarea {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 1.714285714;
+  width: 100%;
+}
+
+/* line 843, ../sass/_parent.scss */
+#respond form input[type="text"] {
+  width: 46.333333333%;
+}
+
+/* line 846, ../sass/_parent.scss */
+#respond form textarea.blog-textarea {
+  width: 79.666666667%;
+}
+
+/* line 849, ../sass/_parent.scss */
+#respond form p.form-allowed-tags {
+  margin: 0;
+  font-size: 11px;
+  color: #5e5e5e;
+}
+
+/* line 854, ../sass/_parent.scss */
+.required {
+  color: red;
+}
+
+/* =Front page template
+-------------------------------------------------------------- */
+/* line 860, ../sass/_parent.scss */
+.front-image {
+  float: right;
+}
+
+/* line 863, ../sass/_parent.scss */
+.front-content {
+  float: left;
+}
+
+/* line 866, ../sass/_parent.scss */
+.template-front-page .site-content article {
+  border: 0;
+  margin-bottom: 0;
+}
+
+/* line 870, ../sass/_parent.scss */
+.template-front-page .widget-area {
+  clear: both;
+  float: none;
+  width: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ededed;
+}
+
+/* =Widgets
+-------------------------------------------------------------- */
+/* line 880, ../sass/_parent.scss */
+.widget-area .widget ul ul {
+  margin-left: 12px;
+}
+
+/* line 883, ../sass/_parent.scss */
+.widget_rss li {
+  margin: 12px 0;
+}
+
+/* line 887, ../sass/_parent.scss */
+.widget_recent_entries .post-date,
+.widget_rss .rss-date {
+  color: #aaa;
+  margin-left: 12px;
+}
+
+/* line 891, ../sass/_parent.scss */
+#wp-calendar {
+  margin: 0;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.846153846;
+  color: #686868;
+}
+
+/* line 900, ../sass/_parent.scss */
+#wp-calendar th,
+#wp-calendar td,
+#wp-calendar caption {
+  text-align: left;
+}
+
+/* line 903, ../sass/_parent.scss */
+#wp-calendar #next {
+  padding-right: 1.5rem;
+  text-align: right;
+}
+
+/* line 907, ../sass/_parent.scss */
+.widget_search label {
+  display: block;
+  line-height: 1.846153846;
+  display: none !important;
+}
+
+/* line 912, ../sass/_parent.scss */
+.widget_twitter li {
+  list-style-type: none;
+}
+
+/* line 915, ../sass/_parent.scss */
+.widget_twitter .timesince {
+  display: block;
+  text-align: right;
+}
+
+/* =Plugins
+----------------------------------------------- */
+/* line 922, ../sass/_parent.scss */
+img#wpstats {
+  display: none;
+}
+
+/* line 925, ../sass/_parent.scss */
+.tiled-gallery {
+  margin-bottom: 1.5rem !important;
+}
+
+/* line 928, ../sass/_parent.scss */
+.comments-area {
+  /* Jetpack comments */
+  margin-bottom: 1.5rem !important;
+}
+
+/* line 931, ../sass/_parent.scss */
+.recentcomments a {
+  display: inline !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* =TinyMCE Editor
+----------------------------------------------- */
+/* line 939, ../sass/_parent.scss */
+html .mceContentBody {
+  max-width: 920px !important;
+  margin: 15px 0 0 15px !important;
+  padding: 0 !important;
+  background: white !important;
+}
+
+/* line 945, ../sass/_parent.scss */
+cite {
+  border-bottom: 0 !important;
+}
+
+/* line 949, ../sass/_parent.scss */
+html .mceContentBody ul,
+html .mceContentBody ol {
+  margin-left: 25px !important;
+}
+
+/* line 952, ../sass/_parent.scss */
+.mceContentBody code {
+  font-family: Consolas, Monaco, Lucida Console, monospace;
+  font-size: 12px;
+  line-height: 2;
+}
+
+/* line 957, ../sass/_parent.scss */
+.mceContentBody pre {
+  background: #f5f5f5;
+  color: #666;
+  font-family: monospace;
+  font-size: 14px;
+  margin: 20px 0;
+  overflow: auto;
+  padding: 20px;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+
+/* line 968, ../sass/_parent.scss */
+.mceContentBody pre code {
+  display: block;
+}
+
+/* line 973, ../sass/_parent.scss */
+.mceContentBody abbr,
+.mceContentBody dfn,
+.mceContentBody acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+/* line 977, ../sass/_parent.scss */
+.mceContentBody address {
+  display: block;
+  line-height: 1.714285714;
+  margin: 0 0 1.5rem;
+}
+
+/* line 983, ../sass/_parent.scss */
+.mceContentBody img.alignleft,
+.mceContentBody .wp-caption.alignleft {
+  margin: 12px 1.5rem 12px 0 !important;
+}
+
+/* line 987, ../sass/_parent.scss */
+.mceContentBody img.alignright,
+.mceContentBody .wp-caption.alignright {
+  margin: 12px 0 12px 1.5rem !important;
+}
+
+/* line 990, ../sass/_parent.scss */
+.mceContentBody img.aligncenter {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/* line 994, ../sass/_parent.scss */
+.mceContentBody img.alignnone {
+  margin-bottom: 1.5rem !important;
+}
+
+/* line 1000, ../sass/_parent.scss */
+.mceContentBody embed,
+.mceContentBody iframe,
+.mceContentBody object,
+.mceContentBody video {
+  margin-bottom: 1.5rem;
+}
+
+/* line 1003, ../sass/_parent.scss */
+.mceContentBody dl {
+  margin: 0 1.5rem;
+}
+
+/* line 1006, ../sass/_parent.scss */
+.mceContentBody dt {
+  font-weight: bold;
+  line-height: 1.714285714;
+}
+
+/* line 1010, ../sass/_parent.scss */
+.mceContentBody dd {
+  line-height: 1.714285714;
+  margin-bottom: 1.5rem;
+}
+
+/* line 1014, ../sass/_parent.scss */
+.mceContentBody table {
+  border-bottom: 1px solid #ededed;
+  color: #757575;
+  line-height: 2;
+  margin: 0 0 1.5rem;
+  width: 100%;
+}
+
+/* line 1021, ../sass/_parent.scss */
+.mceContentBody table caption {
+  font-size: 16px;
+  margin: 1.5rem 0;
+}
+
+/* line 1025, ../sass/_parent.scss */
+.mceContentBody td {
+  border-top: 1px solid #ededed;
+  padding: 0.429em 0.714em;
+}
+
+/* line 1029, ../sass/_parent.scss */
+.mceContentBody del {
+  color: #333;
+}
+
+/* line 1032, ../sass/_parent.scss */
+.mceContentBody ins {
+  background: #fff9c0 !important;
+  text-decoration: none !important;
+  padding: 0 0.214em;
+  color: inherit !important;
+  border: 0 !important;
+}
+
+/* line 1040, ../sass/_parent.scss */
+.mceContentBody sub,
+.mceContentBody sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 1046, ../sass/_parent.scss */
+.mceContentBody sup {
+  top: -0.5em;
+}
+
+/* line 1049, ../sass/_parent.scss */
+.mceContentBody sub {
+  bottom: -0.25em;
+}
+
+/* line 1052, ../sass/_parent.scss */
+.mceContentBody small {
+  font-size: smaller;
+}
+
+/* =Misc
+----------------------------------------------- */
+/* Off-Canvas */
+/* line 1064, ../sass/_parent.scss */
+ul.off-canvas-list li,
+ul.off-canvas-list li li,
+ul.off-canvas-list li li li,
+ul.off-canvas-list li li li li,
+ul.off-canvas-list li li li li li,
+ul.off-canvas-list li li li li li li {
+  list-style-type: none !important;
+}
+
+/* line 1067, ../sass/_parent.scss */
+section.tab-bar-section.go-left {
+  text-align: left !important;
+}
+
+/* line 1070, ../sass/_parent.scss */
+section.tab-bar-section.go-right {
+  text-align: right !important;
+}
+
+/* line 1073, ../sass/_parent.scss */
+section.tab-bar-section.middle a {
+  color: white !important;
+  font-weight: normal !important;
+}
+
+/* Top-Bar */
+/* line 1079, ../sass/_parent.scss */
+.top-bar .name a {
+  line-height: 45px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: white;
+  display: block;
+  padding: 0 15px;
+}
+
+/* line 1086, ../sass/_parent.scss */
+.top-bar .toggle-topbar a {
+  font-weight: normal !important;
+}
+
+/* Orbit */
+/* line 1090, ../sass/_parent.scss */
+.orbit-bullets li {
+  cursor: pointer !important;
+  display: inline-block !important;
+}
+
+/* line 1094, ../sass/_parent.scss */
+.orbit-container {
+  margin-bottom: 1.714em !important;
+}
+
+/* Magellan */
+/* line 1099, ../sass/_parent.scss */
+.entry-content > [data-magellan-expedition] {
+  margin: 0 0 1.714em !important;
+}
+
+/* line 1102, ../sass/_parent.scss */
+.entry-content dl.sub-nav {
+  margin: 0 !important;
+}
+
+/* bbPress */
+/* line 1107, ../sass/_parent.scss */
+#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content {
+  background: #fafafa;
+}
+
+/* Back to Top */
+/* line 1112, ../sass/_parent.scss */
+#backtotop {
+  background: #444;
+  display: block;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 99999;
+  cursor: pointer;
+  display: none;
+  color: #f9f9f9;
+  font-size: 0.6875rem;
+  width: 3.125rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 3.125rem;
+}
+
+/* =WordPress Social Menu
+----------------------------------------------- */
+/* line 1133, ../sass/_parent.scss */
+span.screen-reader-text {
+  display: none;
+}
+
+/* line 1136, ../sass/_parent.scss */
+#menu-social {
+  text-align: left;
+}
+
+/* line 1139, ../sass/_parent.scss */
+#menu-social ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+}
+
+/* line 1144, ../sass/_parent.scss */
+#menu-social ul li {
+  display: inline-block;
+  position: relative;
+}
+
+/* line 1148, ../sass/_parent.scss */
+#menu-social li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* line 1153, ../sass/_parent.scss */
+#menu-social li a::before {
+  content: '/';
+  display: inline-block;
+  padding: 0 3px;
+  font-family: 'FontAwesome';
+  font-size: 32px;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 1162, ../sass/_parent.scss */
+#menu-social li a[href*="facebook.com"]::before {
+  content: "\f082";
+}
+
+/* line 1165, ../sass/_parent.scss */
+#menu-social li a[href*="twitter.com"]::before {
+  content: "\f081";
+}
+
+/* line 1168, ../sass/_parent.scss */
+#menu-social li a[href*="dribbble.com"]::before {
+  content: "\f17d";
+}
+
+/* line 1171, ../sass/_parent.scss */
+#menu-social li a[href*="plus.google.com"]::before {
+  content: "\f0d4";
+}
+
+/* line 1174, ../sass/_parent.scss */
+#menu-social li a[href*="pinterest.com"]::before {
+  content: "\f0d3";
+}
+
+/* line 1177, ../sass/_parent.scss */
+#menu-social li a[href*="github.com"]::before {
+  content: "\f092";
+}
+
+/* line 1180, ../sass/_parent.scss */
+#menu-social li a[href*="tumblr.com"]::before {
+  content: "\f174";
+}
+
+/* line 1183, ../sass/_parent.scss */
+#menu-social li a[href*="youtube.com"]::before {
+  content: "\f166";
+}
+
+/* line 1186, ../sass/_parent.scss */
+#menu-social li a[href*="flickr.com"]::before {
+  content: "\f16e";
+}
+
+/* line 1189, ../sass/_parent.scss */
+#menu-social li a[href*="vimeo.com"]::before {
+  content: "\f194";
+}
+
+/* line 1192, ../sass/_parent.scss */
+#menu-social li a[href*="instagram.com"]::before {
+  content: "\f16d";
+}
+
+/* line 1195, ../sass/_parent.scss */
+#menu-social li a[href*="foursquare.com"]::before {
+  content: "\f180";
+}
+
+/* line 1198, ../sass/_parent.scss */
+#menu-social li a[href*="linkedin.com"]::before {
+  content: "\f08c";
+}
+
+/* =Media Queries
+----------------------------------------------- */
+@media only screen and (max-width: 40em) {
+  /* line 1205, ../sass/_parent.scss */
+  .site-header h1 {
+    font-size: 1.875rem !important;
+  }
+
+  /* line 1208, ../sass/_parent.scss */
+  #wrapper {
+    padding: 0;
+  }
+
+  /* line 1211, ../sass/_parent.scss */
+  .site-header {
+    padding-top: 0.9375rem;
+  }
+
+  /* line 1214, ../sass/_parent.scss */
+  footer > .site-info {
+    text-align: center !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* line 1218, ../sass/_parent.scss */
+  #backtotop {
+    background: black;
+    opacity: 0.4;
+    bottom: 2.5rem;
+    width: 2.125rem;
+    height: 2.125rem;
+    font-size: 0.625rem;
+    line-height: 2.125rem;
+  }
+
+  /* line 1226, ../sass/_parent.scss */
+  #backtotop:hover {
+    background: #008cba;
+    opacity: 1;
+  }
+
+  /* line 1229, ../sass/_parent.scss */
+  #wpadminbar {
+    top: -2.875rem;
+  }
+
+  /* line 1232, ../sass/_parent.scss */
+  #menu-social li a::before {
+    padding: 0 1px;
+    font-size: 28px;
+  }
+
+  /* line 1236, ../sass/_parent.scss */
+  section.tab-bar-section.middle a {
+    color: white !important;
+    font-weight: normal !important;
+  }
+}
+/* line 1, ../sass/_main.scss */
+button, .button {
+  background: #12538F;
+}
+
+/* line 4, ../sass/_main.scss */
+a.button:hover, input.button:hover {
+  background: #76d100;
+}
+
+/* line 1, ../sass/_header.scss */
+#header {
+  background: #333333;
+  margin: -25px 0 20px -10px;
+  padding: 20px;
+  width: 102%;
+}
+
+/* line 7, ../sass/_header.scss */
+.top-bar, .top-bar-section li:not(.has-form) a:not(.button) {
+  background: #121212;
+}
+
+/* line 10, ../sass/_header.scss */
+.top-bar-section li.active:not(.has-form) a:not(.button), .top-bar-section li.active:not(.has-form) a:not(.button):hover {
+  background: #272727;
+}
+
+/* Big ideas, real results menu */
+/* line 15, ../sass/_header.scss */
+#big-menu li {
+  display: inline;
+  list-style: none;
+}
+/* line 18, ../sass/_header.scss */
+#big-menu li a {
+  font-size: 2em;
+}
+
+/* line 23, ../sass/_header.scss */
+#big-ideas, #real-results {
+  overflow: hidden;
+  height: 0;
+}
+
+/* line 27, ../sass/_header.scss */
+#bi-link:hover #big-ideas, #rr-link:hover #real-results {
+  height: auto;
+}
+
+/* end big ideas, real results menu */

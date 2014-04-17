@@ -1,0 +1,30 @@
+#header {
+	background: #333333;
+	margin: -25px 0 20px -10px;
+	padding: 20px;
+	width: 102%;
+}
+.top-bar, .top-bar-section li:not(.has-form) a:not(.button) {
+background: #121212;
+}
+.top-bar-section li.active:not(.has-form) a:not(.button), .top-bar-section li.active:not(.has-form) a:not(.button):hover {
+background: #272727;
+}
+/* Big ideas, real results menu */
+#big-menu {
+	li {
+	display: inline;
+	list-style: none;
+		a {
+		font-size: 2em;
+		}
+	}
+}
+#big-ideas, #real-results {
+	overflow: hidden;
+	height: 0;
+}
+#bi-link:hover #big-ideas, #rr-link:hover #real-results {
+	height: auto;
+}
+/* end big ideas, real results menu */
