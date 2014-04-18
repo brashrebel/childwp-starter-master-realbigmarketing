@@ -7,15 +7,29 @@
  * @since WP-Forge 5.2.0
  */
 $post_slug = basename(get_permalink());
+$position = get_field('staff_title');
 ?>
 
-		<div id="post-<?php the_ID(); ?>" class="small-6 large-3 columns grid-item">
+		<div id="post-<?php the_ID(); ?>" class="small-6 medium-5 large-4 columns grid-item">
 			<a href="<?php the_permalink(); ?>">
           	<?php if ( has_post_thumbnail() ) : ?>
-	            		<?php the_post_thumbnail('thumbnail'); ?>
-	            	
+	            		<?php the_post_thumbnail('thumbnail', array('class' => 'th')); ?>
+						<div class="slexcerpt">
+							<h5><?php the_title(); ?></h5>
+						</div>
+			<?php elseif (is_post_type_archive('staff')) : ?>
+	            		<?php echo get_avatar(get_the_author_meta('ID'), 200); ?>
+						<div class="slexcerpt">
+							<h4><?php the_title(); ?></h4>
+							<h5><?php echo $position; ?></h5>
+						</div>
 	        <?php else : ?>
-						<span class="fa fa-<?php echo $post_slug; ?>"></span>
+						<span class="fa fa-<?php echo $post_slug; ?>">
+							<h5><?php the_title(); ?></h5>
+						</span>
+						<div class="slexcerpt">
+							<?php the_excerpt(); ?>
+						</div>
 			<?php endif; ?>
 			</a>
 		</div><!-- .entry-header -->

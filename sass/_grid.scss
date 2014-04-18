@@ -1,6 +1,42 @@
 .grid-item {
+color: $gray;
+position: relative;
+overflow: hidden;
 	span {
-	font-size: 10em;
+	font-size: 8em;
+	text-align: center;
+	background-color: $lg;
+	width: 100%;
+	min-height: 2em;
+	margin: 0 0 10px 0;
+	padding: 10px 5px;
+	transition: color 1s;
+	}
+	.slexcerpt {
+	position: absolute;
+	background-color: $white;
+	padding: 5px 10px 0 5px;
+	bottom: -200%;
+	transition: bottom 0.9s;
+		p {
+		font-size: 0.8em;
+		color: $gray;
+		}
+		h5 {
+		font-size: 70%;
+		}
+	}
+	&:hover {
+		.slexcerpt {
+		bottom: 0;
+		}
+		.th + .slexcerpt {
+		bottom: 28px;
+		width: 9.7em;
+		}
+	}
+	.th {
+	margin-top: 5px;
 	}
 }
 .fa-marketing-research:before {
@@ -50,4 +86,13 @@ content: "\f06e";
 }
 [class*="column"] + [class*="column"]:last-child {
 float: left;
+}
+@media only screen and (min-width: $medium) and (max-width: $large) {
+.grid-item {
+	&:hover {
+		.th + .slexcerpt {
+		width: 73%;
+		}
+	}
+}
 }

@@ -1735,19 +1735,20 @@ span.screen-reader-text {
 /* line 12, ../sass/_main.scss */
 #content, #secondary {
   padding-top: 12px;
+  padding-bottom: 20px;
 }
 
-/* line 15, ../sass/_main.scss */
+/* line 16, ../sass/_main.scss */
 button, .button {
   background: #12538f;
 }
 
-/* line 18, ../sass/_main.scss */
+/* line 19, ../sass/_main.scss */
 a.button:hover, input.button:hover {
   background: #76d100;
 }
 
-/* line 21, ../sass/_main.scss */
+/* line 22, ../sass/_main.scss */
 .fa {
   font-family: 'FontAwesome';
   font-weight: lighter;
@@ -1866,87 +1867,137 @@ a.button:hover, input.button:hover {
     content: "Call us today: ";
   }
 }
-/* line 2, ../sass/_grid.scss */
+/* line 1, ../sass/_grid.scss */
+.grid-item {
+  color: #333333;
+  position: relative;
+  overflow: hidden;
+}
+/* line 5, ../sass/_grid.scss */
 .grid-item span {
-  font-size: 10em;
+  font-size: 8em;
+  text-align: center;
+  background-color: #e0e0e0;
+  width: 100%;
+  min-height: 2em;
+  margin: 0 0 10px 0;
+  padding: 10px 5px;
+  transition: color 1s;
+}
+/* line 15, ../sass/_grid.scss */
+.grid-item .slexcerpt {
+  position: absolute;
+  background-color: white;
+  padding: 5px 10px 0 5px;
+  bottom: -200%;
+  transition: bottom 0.9s;
+}
+/* line 21, ../sass/_grid.scss */
+.grid-item .slexcerpt p {
+  font-size: 0.8em;
+  color: #333333;
+}
+/* line 25, ../sass/_grid.scss */
+.grid-item .slexcerpt h5 {
+  font-size: 70%;
+}
+/* line 30, ../sass/_grid.scss */
+.grid-item:hover .slexcerpt {
+  bottom: 0;
+}
+/* line 33, ../sass/_grid.scss */
+.grid-item:hover .th + .slexcerpt {
+  bottom: 28px;
+  width: 9.7em;
+}
+/* line 38, ../sass/_grid.scss */
+.grid-item .th {
+  margin-top: 5px;
 }
 
-/* line 6, ../sass/_grid.scss */
+/* line 42, ../sass/_grid.scss */
 .fa-marketing-research:before {
   content: "\f002";
 }
 
-/* line 9, ../sass/_grid.scss */
+/* line 45, ../sass/_grid.scss */
 .fa-marketing-strategy-firm:before {
   content: "\f0eb";
 }
 
-/* line 12, ../sass/_grid.scss */
+/* line 48, ../sass/_grid.scss */
 .fa-online-advertising-firm:before {
   content: "\f0ac";
 }
 
-/* line 15, ../sass/_grid.scss */
+/* line 51, ../sass/_grid.scss */
 .fa-mobile-marketing:before {
   content: "\f10b";
 }
 
-/* line 18, ../sass/_grid.scss */
+/* line 54, ../sass/_grid.scss */
 .fa-web-hosting:before {
   content: "\f0a0";
 }
 
-/* line 21, ../sass/_grid.scss */
+/* line 57, ../sass/_grid.scss */
 .fa-campaign-management:before {
   content: "\f046";
 }
 
-/* line 24, ../sass/_grid.scss */
+/* line 60, ../sass/_grid.scss */
 .fa-email-marketing:before {
   content: "\f0e0";
 }
 
-/* line 27, ../sass/_grid.scss */
+/* line 63, ../sass/_grid.scss */
 .fa-online-reputation-management:before {
   content: "\f087";
 }
 
-/* line 30, ../sass/_grid.scss */
+/* line 66, ../sass/_grid.scss */
 .fa-content-marketing:before {
   content: "\f0ad";
 }
 
-/* line 33, ../sass/_grid.scss */
+/* line 69, ../sass/_grid.scss */
 .fa-full-service-social-media-management:before {
   content: "\f0c0";
 }
 
-/* line 36, ../sass/_grid.scss */
+/* line 72, ../sass/_grid.scss */
 .fa-search-engine-optimization:before {
   content: "\f05b";
 }
 
-/* line 39, ../sass/_grid.scss */
+/* line 75, ../sass/_grid.scss */
 .fa-website-development-design:before {
   content: "\f0c1";
 }
 
-/* line 42, ../sass/_grid.scss */
+/* line 78, ../sass/_grid.scss */
 .fa-e-commerce-websites:before {
   content: "\f09d";
 }
 
-/* line 45, ../sass/_grid.scss */
+/* line 81, ../sass/_grid.scss */
 .fa-brand-management-branding:before {
   content: "\f005";
 }
 
-/* line 48, ../sass/_grid.scss */
+/* line 84, ../sass/_grid.scss */
 .fa-graphic-design:before {
   content: "\f06e";
 }
 
-/* line 51, ../sass/_grid.scss */
+/* line 87, ../sass/_grid.scss */
 [class*="column"] + [class*="column"]:last-child {
   float: left;
+}
+
+@media only screen and (min-width: 60em) and (max-width: 90em) {
+  /* line 93, ../sass/_grid.scss */
+  .grid-item:hover .th + .slexcerpt {
+    width: 73%;
+  }
 }
