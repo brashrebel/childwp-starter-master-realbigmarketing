@@ -17,13 +17,21 @@
 				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wpforge' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h1>
 			<?php endif; // is_single() ?>
-			<?php if( get_theme_mod( 'wpforge_thumb_display' ) == 'yes') { ?>
-            	<?php the_post_thumbnail(); ?>
-            <?php } // end if ?>            
+			<?php if( get_theme_mod( 'wpforge_thumb_display' ) == 'yes' && !is_single()) { ?>
+			<div class="small-2 columns">
+            	<a href="<?php the_permalink(); ?>">
+            	<?php if ( has_post_thumbnail() ) : ?>
+            		<?php the_post_thumbnail('thumbnail');
+            		else :
+            		echo get_avatar(get_the_author_meta('ID'), 175);
+            	endif; ?>
+            	</a>
+            </div>
+            <?php } // end if ?>         
             <!-- Comments removed by Kyle -->
 		</header><!-- .entry-header -->
-		<?php if( get_theme_mod( 'wpforge_post_display' ) == 'excerpt') { ?>
-            <div class="entry-summary">
+		<?php if( get_theme_mod( 'wpforge_post_display' ) == 'excerpt' || is_home()) { ?>
+            <div class="entry-summary small-10 columns front-content">
                 <?php the_excerpt(); ?>
             </div><!-- .entry-summary -->
 		<?php } else { ?>

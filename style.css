@@ -1866,3 +1866,17 @@ a.button:hover, input.button:hover {
     content: "Call us today: ";
   }
 }
+/* line 2, ../sass/_grid.scss */
+.grid-item span {
+  font-size: 10em;
+}
+
+/* line 6, ../sass/_grid.scss */
+.fa-marketing-research:before {
+  content: "\f002";
+}
+
+/* line 9, ../sass/_grid.scss */
+.fa-marketing-strategy-firm:before {
+  content: "\f013";
+}
