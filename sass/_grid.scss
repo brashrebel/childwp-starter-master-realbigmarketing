@@ -7,5 +7,47 @@
 content: "\f002";
 }
 .fa-marketing-strategy-firm:before {
-content: "\f013";
+content: "\f0eb";
+}
+.fa-online-advertising-firm:before {
+content: "\f0ac";
+}
+.fa-mobile-marketing:before {
+content: "\f10b";
+}
+.fa-web-hosting:before {
+content: "\f0a0";
+}
+.fa-campaign-management:before {
+content: "\f046";
+}
+.fa-email-marketing:before {
+content: "\f0e0";
+}
+.fa-online-reputation-management:before {
+content: "\f087";
+}
+.fa-content-marketing:before {
+content: "\f0ad";
+}
+.fa-full-service-social-media-management:before {
+content: "\f0c0";
+}
+.fa-search-engine-optimization:before {
+content: "\f05b";
+}
+.fa-website-development-design:before {
+content: "\f0c1";
+}
+.fa-e-commerce-websites:before {
+content: "\f09d";
+}
+.fa-brand-management-branding:before {
+content: "\f005";
+}
+.fa-graphic-design:before {
+content: "\f06e";
+}
+[class*="column"] + [class*="column"]:last-child {
+float: left;
 }

@@ -59,4 +59,17 @@ function rbm_menu_widget_areas() {
 		));
 }
 add_action('widgets_init', 'rbm_menu_widget_areas');
+/*-------------------------------------
+Increase number of posts shown on clients and services
+-------------------------------------*/
+function rbm_increase_num_posts($query) {
+	if (is_main_query()) {
+		if (is_post_type_archive( 'service' ) || is_post_type_archive( 'customer' )) {
+			$query->set('posts_per_page', 30);
+			wp_reset_query();
+			return;
+		}
+	}
+}
+//add_action('pre_get_posts', 'rbm_increase_num_posts', 1);
 ?>
