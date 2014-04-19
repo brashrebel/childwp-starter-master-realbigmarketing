@@ -10,14 +10,14 @@ overflow: hidden;
 	min-height: 2em;
 	margin: 0 0 10px 0;
 	padding: 10px 5px;
-	transition: color 1s;
+	transition: color 0.7s;
 	}
 	.slexcerpt {
 	position: absolute;
 	background-color: $white;
 	padding: 5px 10px 0 5px;
 	bottom: -200%;
-	transition: bottom 0.9s;
+	transition: bottom 0.7s;
 		p {
 		font-size: 0.8em;
 		color: $gray;
@@ -92,6 +92,15 @@ float: left;
 	&:hover {
 		.th + .slexcerpt {
 		width: 73%;
+		}
+	}
+}
+}
+@media only screen and (min-width: $large) {
+.grid-item {
+	.slexcerpt {
+		h5 {
+		font-size: 1em;
 		}
 	}
 }

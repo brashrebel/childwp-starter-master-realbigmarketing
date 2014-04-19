@@ -1,0 +1,32 @@
+.welcome {
+padding: 20px;
+background-color: $blue;
+color: $white;
+margin: -10px 0 10px 0;
+line-height: 1.4em;
+	.button {
+	background: $green;
+	margin-top: 10px;
+		&:hover {
+
+		}
+	}
+	h3 {
+	color: inherit;
+	}
+}
+.home-features {
+text-align: center;
+	.fa {
+	font-size: 8em;
+	}
+}
+.fa-feature-numero-uno:before {
+content: "\f002";
+}
+.fa-feature-numero-dos:before {
+content: "\f0eb";
+}
+.fa-feature-numero-tres:before {
+content: "\f0ac";
+}

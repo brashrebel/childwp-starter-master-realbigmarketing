@@ -7,14 +7,16 @@
  * @since WP-Forge 5.2.0
  */
 
-get_header(); ?>
+get_header();
+$post_type = get_post_type();
+?>
 
 	<div id="content" class="medium-8 large-8 columns" role="main">
     
     	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
-			<?php if (get_post_type() == 'staff') {
+			<?php if ($post_type == 'staff' || $post_type == 'service' || $post_type == 'customer') {
 				get_template_part( 'content', 'custom' );
 			} else {
 				get_template_part( 'content', get_post_format() ); } ?>

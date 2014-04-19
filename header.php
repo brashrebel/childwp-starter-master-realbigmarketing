@@ -48,7 +48,7 @@
              </div><!-- .site-header -->
         <?php include('big.php'); ?>
         </header><!-- #header -->
-            
+        <?php if (is_home()) { include('inc/welcome.php'); include('inc/home-features.php'); } ?>
 		<?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal') { ?>
             <?php get_template_part( 'content', 'nav' ); ?>
         <?php } // end if ?>

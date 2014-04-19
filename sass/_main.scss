@@ -13,7 +13,10 @@ outline: 5px solid $lg;
 padding-top: 12px; 
 padding-bottom: 20px;
 }
-button, .button {
+.entry-content {
+padding: 0 12px;
+}
+button, .button, .label {
 background: $blue;
 }
 a.button:hover, input.button:hover {
@@ -22,4 +25,9 @@ a.button:hover, input.button:hover {
 .fa {
 font-family: 'FontAwesome';
 font-weight: lighter;
+}
+.entry-header {
+	h1 {
+	margin-left: 10px;
+	}
 }

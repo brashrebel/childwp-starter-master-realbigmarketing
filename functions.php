@@ -9,8 +9,8 @@ function rbm_menu_widget_areas() {
 		'id' => 'big_ideas_1',
 		'before_widget' => '',
 		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
 		));
 	// Big Ideas 2
 	register_sidebar( array(
@@ -18,8 +18,8 @@ function rbm_menu_widget_areas() {
 		'id' => 'big_ideas_2',
 		'before_widget' => '',
 		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
 		));
 	// Big Ideas 3
 	register_sidebar( array(
@@ -27,8 +27,8 @@ function rbm_menu_widget_areas() {
 		'id' => 'big_ideas_3',
 		'before_widget' => '',
 		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
 		));
 	// Real Results 1
 	register_sidebar( array(
@@ -36,8 +36,8 @@ function rbm_menu_widget_areas() {
 		'id' => 'real_results_1',
 		'before_widget' => '',
 		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
 		));
 	// Real Results 2
 	register_sidebar( array(
@@ -45,8 +45,8 @@ function rbm_menu_widget_areas() {
 		'id' => 'real_results_2',
 		'before_widget' => '',
 		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
 		));
 	// Real Results 3
 	register_sidebar( array(
@@ -54,8 +54,8 @@ function rbm_menu_widget_areas() {
 		'id' => 'real_results_3',
 		'before_widget' => '',
 		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
 		));
 }
 add_action('widgets_init', 'rbm_menu_widget_areas');

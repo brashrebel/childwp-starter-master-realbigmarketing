@@ -1,0 +1,60 @@
+.staff-info {
+	.button {
+	width: 100%;
+	font-size: 0.7em;
+	margin: 5px 0 0;
+	}
+	.panel {
+	margin-top: 10px;
+	}
+}
+.staff-info {
+	.label {
+	margin: 15px 0 0 0;
+	}
+}
+.staff-posts {
+background-color: $lg;
+text-align: center;
+	a {
+		&:hover {
+			h4 {
+				color: $green;
+			}
+		}
+	}
+}
+.staff-more {
+	.row {
+	background-color: $lg;
+	}
+	.label {
+	width: 100%;
+	}
+}
+@media only screen and (min-width: $medium) {
+.staff-info {
+	.panel {
+		.staff-data {
+		font-size: 0.8em;
+		}
+	}
+}
+.staff-more {
+	.staff-posts {
+	min-height: 18em;
+		h4 {
+		font-size: 1em;
+		}
+	}
+}
+}
+@media only screen and (min-width: $medium) and (max-width: $large) {
+.staff-info {
+	.panel {
+		.label {
+		width: 100%;
+		}
+	}
+}
+}

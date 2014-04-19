@@ -21,13 +21,15 @@
                 
 				<div class="small-2 columns">
 	            	<a href="<?php the_permalink(); ?>">
-	            		<?php the_post_thumbnail('thumbnail'); ?>
+	            		<?php the_post_thumbnail('thumbnail', array('class' => 'th')); ?>
 	            	</a>
 	            </div><!-- /columns -->
 	        <?php else : ?>
-	            	<div class="small-2 columns">
+            	<div class="small-2 columns">
+            		<a href="<?php the_permalink(); ?>">
 						<?php echo get_avatar(get_the_author_meta('ID'), 175); ?>
-					</div><!-- /columns -->
+					</a>
+				</div><!-- /columns -->
 			<?php endif; ?>
             <!-- Comments removed by Kyle -->
 		</header><!-- .entry-header -->
