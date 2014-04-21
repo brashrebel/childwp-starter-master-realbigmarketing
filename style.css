@@ -1764,6 +1764,28 @@ a.button:hover, input.button:hover {
   margin-left: 10px;
 }
 
+/* line 37, ../sass/_main.scss */
+ul.pagination li.current a {
+  background: #12538f;
+}
+/* line 39, ../sass/_main.scss */
+ul.pagination li.current a:hover {
+  background: #76d100;
+}
+/* line 44, ../sass/_main.scss */
+ul.pagination li a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 46, ../sass/_main.scss */
+ul.pagination li a:hover {
+  background: #76d100;
+  color: white;
+}
+
 /* line 1, ../sass/_header.scss */
 #header {
   background: #333333;
@@ -1828,52 +1850,66 @@ a.button:hover, input.button:hover {
 #big-menu ul li.top-link > a span.fa-bulb {
   color: #12538f;
 }
-/* line 45, ../sass/_header.scss */
+/* line 44, ../sass/_header.scss */
+#big-menu ul li.top-link > a span.fa-bulb:after {
+  padding: 0 0 0 10px;
+  content: "Big Ideas";
+  font-family: "Arial", sans-serif;
+  color: #f2f2f2;
+}
+/* line 51, ../sass/_header.scss */
 #big-menu ul li.top-link > a span.fa-gear {
   color: #76d100;
 }
-/* line 49, ../sass/_header.scss */
+/* line 53, ../sass/_header.scss */
+#big-menu ul li.top-link > a span.fa-gear:after {
+  padding: 0 0 0 10px;
+  content: "Real Results";
+  font-family: "Arial", sans-serif;
+  color: #f2f2f2;
+}
+/* line 61, ../sass/_header.scss */
 #big-menu ul li.top-link > a:hover {
   color: white;
 }
-/* line 53, ../sass/_header.scss */
+/* line 65, ../sass/_header.scss */
 #big-menu ul li.top-link .real-big-nav {
   position: absolute;
   left: 0;
   background: #333333;
   color: white;
 }
-/* line 58, ../sass/_header.scss */
+/* line 70, ../sass/_header.scss */
 #big-menu ul li.top-link .real-big-nav li {
   line-height: 1.6em;
 }
-/* line 60, ../sass/_header.scss */
+/* line 72, ../sass/_header.scss */
 #big-menu ul li.top-link .real-big-nav li a {
   font-family: "Arial", sans-serif;
   padding: 0 0 0 5px;
   color: white;
 }
-/* line 64, ../sass/_header.scss */
+/* line 76, ../sass/_header.scss */
 #big-menu ul li.top-link .real-big-nav li a:hover {
   color: #76d100;
 }
-/* line 68, ../sass/_header.scss */
+/* line 80, ../sass/_header.scss */
 #big-menu ul li.top-link .real-big-nav li.fa {
   display: block;
 }
-/* line 74, ../sass/_header.scss */
+/* line 86, ../sass/_header.scss */
 #big-menu ul h4 {
   color: #f2f2f2;
   text-decoration: underline;
 }
 
-/* line 80, ../sass/_header.scss */
+/* line 92, ../sass/_header.scss */
 #big-ideas, #real-results {
   overflow: hidden;
   height: 0;
 }
 
-/* line 84, ../sass/_header.scss */
+/* line 96, ../sass/_header.scss */
 #bi-link:hover #big-ideas, #rr-link:hover #real-results {
   height: auto;
   width: 100%;
@@ -1881,30 +1917,44 @@ a.button:hover, input.button:hover {
   margin: 8px 0 0 0;
 }
 
-/* line 90, ../sass/_header.scss */
+/* line 102, ../sass/_header.scss */
 .fa-bulb:before {
   content: "\f0eb";
 }
 
-/* line 93, ../sass/_header.scss */
+/* line 105, ../sass/_header.scss */
 .fa-gear:before {
   content: "\f013";
 }
 
 /* end big ideas, real results menu */
 /* Responsive adjustments */
+@media only screen and (max-width: 40em) {
+  /* line 121, ../sass/_header.scss */
+  #big-menu ul li.top-link > a {
+    font-size: 4em;
+  }
+  /* line 125, ../sass/_header.scss */
+  #big-menu ul li.top-link > a span.fa-bulb:after {
+    content: " ";
+  }
+  /* line 130, ../sass/_header.scss */
+  #big-menu ul li.top-link > a span.fa-gear:after {
+    content: " ";
+  }
+}
 @media only screen and (min-width: 60em) {
-  /* line 109, ../sass/_header.scss */
+  /* line 144, ../sass/_header.scss */
   #header {
     margin: -25px 0 20px -10px;
   }
 
-  /* line 115, ../sass/_header.scss */
+  /* line 150, ../sass/_header.scss */
   .top-bar .name span:before {
     content: "Call us today: ";
   }
 
-  /* line 123, ../sass/_header.scss */
+  /* line 158, ../sass/_header.scss */
   .real-big-nav ul li {
     font-size: 1.6em;
   }

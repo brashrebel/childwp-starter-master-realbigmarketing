@@ -31,3 +31,22 @@ font-weight: lighter;
 	margin-left: 10px;
 	}
 }
+ul.pagination {
+	li {
+		&.current {
+			a {
+			background: $blue;
+				&:hover {
+				background: $green;
+				}
+			}
+		}
+		a {
+		@include border-radius(0);
+			&:hover {
+			background: $green;
+			color: $white;
+			}
+		}
+	}
+}

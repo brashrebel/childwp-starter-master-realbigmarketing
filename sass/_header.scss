@@ -41,9 +41,21 @@ margin: 30px 0 0 0;
 				padding: 0 6px 0 0;			
 					&.fa-bulb {
 					color: $blue;
+						&:after {
+						padding: 0 0 0 10px;
+						content: "Big Ideas";
+						font-family: $arial;
+						color: $lg;
+						}
 					}
 					&.fa-gear {
 					color: $green;
+						&:after {
+						padding: 0 0 0 10px;
+						content: "Real Results";
+						font-family: $arial;
+						color: $lg;
+						}
 					}
 				}
 				&:hover {
@@ -101,6 +113,29 @@ content: "\f013";
 }
 @media only screen and (min-width: $tiny) and (max-width: $small) {
 
+}
+@media only screen and (max-width: $small) {
+#big-menu {
+	ul {
+		li.top-link {
+			> a {
+			font-size: 4em;
+				span {
+					&.fa-bulb {
+						&:after {
+						content: " ";
+						}
+					}
+					&.fa-gear {
+						&:after {
+						content: " ";
+						}
+					}
+				}
+			}
+		}
+	}
+}
 }
 @media only screen and (min-width: $small) and (max-width: $medium) {
 
