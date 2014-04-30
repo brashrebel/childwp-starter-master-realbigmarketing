@@ -10,7 +10,7 @@ $post_slug = basename(get_permalink());
 $position = get_field('staff_title');
 ?>
 
-		<div id="post-<?php the_ID(); ?>" class="<?php if(is_home()) { ?>large-4 columns panel<?php } else { ?>small-6 medium-5 large-4 columns grid-item<?php } ?>">
+		<div id="post-<?php the_ID(); ?>" class="<?php if(is_home()) { ?>large-4 columns panel grid-item<?php } else { ?>small-6 medium-5 large-4 columns grid-item<?php } ?>">
 			<a href="<?php the_permalink(); ?>">
           	<?php if ( has_post_thumbnail() ) : ?>
 	            		<?php the_post_thumbnail('thumbnail', array('class' => 'th')); ?>

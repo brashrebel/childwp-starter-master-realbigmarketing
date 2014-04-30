@@ -26,6 +26,19 @@ a.button:hover, input.button:hover {
 font-family: 'FontAwesome';
 font-weight: lighter;
 }
+.side-social {
+	.button {
+	font-size: 8em;
+	@media only screen and (min-width: $medium) and (max-width: $large) {
+	font-size: 5em;
+	}
+	@media only screen and (max-width: $medium) {
+	font-size: 2em;
+	width: 47%;
+	}
+	width: 40%;
+	}
+}
 .entry-header {
 	h1 {
 	margin-left: 10px;

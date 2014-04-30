@@ -16,7 +16,7 @@ $post_type = get_post_type();
     	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
-			<?php if ($post_type == 'staff' || $post_type == 'service' || $post_type == 'customer') {
+			<?php if ($post_type == 'staff' || $post_type == 'service' || $post_type == 'customer' || $post_type == 'feature') {
 				get_template_part( 'content', 'custom' );
 			} else {
 				get_template_part( 'content', get_post_format() ); } ?>

@@ -20,13 +20,16 @@ text-align: center;
 	.fa {
 	font-size: 8em;
 	}
+	.panel {
+	padding: 0;
+	}
 }
-.fa-feature-numero-uno:before {
-content: "\f002";
-}
-.fa-feature-numero-dos:before {
+.fa-need-marketing-partner:before {
 content: "\f0eb";
 }
-.fa-feature-numero-tres:before {
+.fa-need-search-engine-marketing:before {
+content: "\f002";
+}
+.fa-need-website:before {
 content: "\f0ac";
 }

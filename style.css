@@ -1760,19 +1760,38 @@ a.button:hover, input.button:hover {
 }
 
 /* line 30, ../sass/_main.scss */
+.side-social .button {
+  font-size: 8em;
+  width: 40%;
+}
+@media only screen and (min-width: 60em) and (max-width: 90em) {
+  /* line 30, ../sass/_main.scss */
+  .side-social .button {
+    font-size: 5em;
+  }
+}
+@media only screen and (max-width: 60em) {
+  /* line 30, ../sass/_main.scss */
+  .side-social .button {
+    font-size: 2em;
+    width: 47%;
+  }
+}
+
+/* line 43, ../sass/_main.scss */
 .entry-header h1 {
   margin-left: 10px;
 }
 
-/* line 37, ../sass/_main.scss */
+/* line 50, ../sass/_main.scss */
 ul.pagination li.current a {
   background: #12538f;
 }
-/* line 39, ../sass/_main.scss */
+/* line 52, ../sass/_main.scss */
 ul.pagination li.current a:hover {
   background: #76d100;
 }
-/* line 44, ../sass/_main.scss */
+/* line 57, ../sass/_main.scss */
 ul.pagination li a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1780,7 +1799,7 @@ ul.pagination li a {
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 46, ../sass/_main.scss */
+/* line 59, ../sass/_main.scss */
 ul.pagination li a:hover {
   background: #76d100;
   color: white;
@@ -1985,19 +2004,23 @@ ul.pagination li a:hover {
 .home-features .fa {
   font-size: 8em;
 }
-
-/* line 24, ../sass/_home.scss */
-.fa-feature-numero-uno:before {
-  content: "\f002";
+/* line 23, ../sass/_home.scss */
+.home-features .panel {
+  padding: 0;
 }
 
 /* line 27, ../sass/_home.scss */
-.fa-feature-numero-dos:before {
+.fa-need-marketing-partner:before {
   content: "\f0eb";
 }
 
 /* line 30, ../sass/_home.scss */
-.fa-feature-numero-tres:before {
+.fa-need-search-engine-marketing:before {
+  content: "\f002";
+}
+
+/* line 33, ../sass/_home.scss */
+.fa-need-website:before {
   content: "\f0ac";
 }
 
