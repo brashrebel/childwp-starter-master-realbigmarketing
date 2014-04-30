@@ -2008,18 +2008,22 @@ ul.pagination li a:hover {
 .home-features .panel {
   padding: 0;
 }
+/* line 25, ../sass/_home.scss */
+.home-features .panel span {
+  min-height: 1.7em;
+}
 
-/* line 27, ../sass/_home.scss */
+/* line 30, ../sass/_home.scss */
 .fa-need-marketing-partner:before {
   content: "\f0eb";
 }
 
-/* line 30, ../sass/_home.scss */
+/* line 33, ../sass/_home.scss */
 .fa-need-search-engine-marketing:before {
   content: "\f002";
 }
 
-/* line 33, ../sass/_home.scss */
+/* line 36, ../sass/_home.scss */
 .fa-need-website:before {
   content: "\f0ac";
 }

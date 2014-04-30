@@ -72,4 +72,14 @@ function rbm_increase_num_posts($query) {
 	}
 }
 add_action('pre_get_posts', 'rbm_increase_num_posts', 1);
+/*-------------------------------------
+Exclude Private category from main loop
+-------------------------------------*/
+function rbm_exclude($query) {
+if ($query->is_home()) {
+	$query->set('cat', '-143');
+}
+return $query;
+}
+add_filter('pre_get_posts', 'rbm_exclude');
 ?>
