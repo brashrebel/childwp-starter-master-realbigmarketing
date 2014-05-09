@@ -2087,7 +2087,7 @@ ul.pagination li a:hover {
 }
 
 /* line 48, ../sass/_grid.scss */
-.fa-online-advertising-firm:before {
+.fa-online-advertising-firm:before, .fa-online-advertising-specialist:before {
   content: "\f0ac";
 }
 
@@ -2152,18 +2152,23 @@ ul.pagination li a:hover {
 }
 
 /* line 87, ../sass/_grid.scss */
+.fa-wordpress-developer:before {
+  content: "\f121";
+}
+
+/* line 90, ../sass/_grid.scss */
 [class*="column"] + [class*="column"]:last-child {
   float: left;
 }
 
 @media only screen and (min-width: 60em) and (max-width: 90em) {
-  /* line 93, ../sass/_grid.scss */
+  /* line 96, ../sass/_grid.scss */
   .grid-item:hover .th + .slexcerpt {
     width: 73%;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 102, ../sass/_grid.scss */
+  /* line 105, ../sass/_grid.scss */
   .grid-item .slexcerpt h5 {
     font-size: 1em;
   }

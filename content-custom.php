@@ -45,4 +45,8 @@ $auth_id = get_the_author_meta('ID');
 	echo '<div class="client-more row">';
 	include('inc/client-more.php');
 	echo '</div>';
+} elseif ($post_type == 'jobs') { 
+	echo '<div class="jobs-more">';
+	include('inc/jobs-more.php');
+	echo '</div>';
 } else { } ?>

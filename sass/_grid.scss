@@ -45,7 +45,7 @@ content: "\f002";
 .fa-marketing-strategy-firm:before {
 content: "\f0eb";
 }
-.fa-online-advertising-firm:before {
+.fa-online-advertising-firm:before, .fa-online-advertising-specialist:before {
 content: "\f0ac";
 }
 .fa-mobile-marketing:before {
@@ -83,6 +83,9 @@ content: "\f005";
 }
 .fa-graphic-design:before {
 content: "\f06e";
+}
+.fa-wordpress-developer:before {
+content: "\f121";
 }
 [class*="column"] + [class*="column"]:last-child {
 float: left;
