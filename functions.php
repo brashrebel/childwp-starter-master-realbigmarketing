@@ -1,65 +1,5 @@
 <?php
 /*-------------------------------------
-New widgetized areas for Big menu
--------------------------------------*/
-function rbm_menu_widget_areas() {
-	// Big Ideas 1
-	register_sidebar( array(
-		'name' => 'Big Ideas Column 1',
-		'id' => 'big_ideas_1',
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-		));
-	// Big Ideas 2
-	register_sidebar( array(
-		'name' => 'Big Ideas Column 2',
-		'id' => 'big_ideas_2',
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-		));
-	// Big Ideas 3
-	register_sidebar( array(
-		'name' => 'Big Ideas Column 3',
-		'id' => 'big_ideas_3',
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-		));
-	// Real Results 1
-	register_sidebar( array(
-		'name' => 'Real Results Column 1',
-		'id' => 'real_results_1',
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-		));
-	// Real Results 2
-	register_sidebar( array(
-		'name' => 'Real Results Column 2',
-		'id' => 'real_results_2',
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-		));
-	// Real Results 3
-	register_sidebar( array(
-		'name' => 'Real Results Column 3',
-		'id' => 'real_results_3',
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-		));
-}
-add_action('widgets_init', 'rbm_menu_widget_areas');
-/*-------------------------------------
 Increase number of posts shown on clients and services
 -------------------------------------*/
 function rbm_increase_num_posts($query) {
@@ -82,4 +22,19 @@ if ($query->is_home()) {
 return $query;
 }
 add_filter('pre_get_posts', 'rbm_exclude');
+/*-------------------------------------
+Google Analytics
+-------------------------------------*/
+function rbm_analytics() { ?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37145568-1', 'realbigmarketing.com');
+  ga('send', 'pageview');
+</script><?php
+}
+add_action('wp_head', 'rbm_analytics', 11);
 ?>
