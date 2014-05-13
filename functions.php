@@ -34,7 +34,8 @@ function rbm_analytics() { ?>
 
   ga('create', 'UA-37145568-1', 'realbigmarketing.com');
   ga('send', 'pageview');
+  
 </script><?php
 }
-add_action('wp_head', 'rbm_analytics', 11);
+add_action('wp_head', 'rbm_analytics', 12);
 ?>
